@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="https://use.typekit.net/edo7lax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>@lemokatto</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script language="javascript" type="text/javascript" src="/js/refresh/refresh.js""></script>
+</head>
+
+    <body>
+        <h1 style="font-family: 'JetBrains Mono', monospace; font-weight: 900; color: dimgrey; text-align: center;">✧ (= ´ ﻌ｀=)ﾉ ミ☆</h1>
+        <div id="main" style="display: flex; flex-direction: column; border-radius: 8px; position: absolute; top: calc(50% - 300px); left: calc(50% - 380px);">
+            <div id="mainheader" style="width: 100%; display: flex; cursor: move; justify-content: center; margin-top: 8px;">
+                <p class="titlebar">readme</p>
+            </div>
+            <div class="card" style="width: 320px; text-align: center; position: relative;">
+                <h1 style="font-family: JetBrains Mono, monospace;">@lemokatto</h1>
+                <img style="border-radius: 16px; width: 200px; object-fit: cover" src="https://i.pinimg.com/originals/cf/0b/d7/cf0bd7ceddce2f1e392f472d76ff307d.jpg" title="art by mofusand"/>
+                <h2>ashlyn, yen or lemo</h2>
+                <p><b>16 · MY → AUS · existing sometimes</b></p>
+                <p>hey there. i'm a student in victoria just trying to survive... not quite year 12 yet.</p>
+                <!--<p><a style="font-family: neue-haas-grotesk-text; font-size: 16px; color: dimgray" href="https://open.spotify.com/track/3hZIvVYZWsuFpdWdXQFgKx?si=bee75f1724c848d9"><i>no, by now, the night belongs to you</i></a></p>-->
+                <p id="songDisplay" title="refresh to get another song i like">song</p>
+            </div>
+        </div>
+        <div style="position: absolute; top: calc(50% - 230px); left: calc(50% - 300px);">
+            <img style="width: 250px;" src="m.png" />
+        </div>
+        <div id="about" style="display: flex; flex-direction: column; border-radius: 8px; position: absolute; top: calc(50% - 300px); left: calc(50% + 20px);">
+            <div id="aboutheader" style="width: 100%; display: flex; cursor: move; justify-content: center; margin-top: 8px;">
+                <p class="titlebar">about</p>
+            </div>
+            <div class="card" style="width: 320px; text-align: left; position: relative;">
+                <p>you'd like to know more about me? <i>really?</i> well, i'm flattered.</p>
+                <p>i like art and design and ...food, apparently. amateur photographer and coder. i write things, though it's doubtful that they'll ever see the light of day. i read, i guess.</p>
+                <p>a cat person. does that need to be said?</p>
+            </div>
+        </div>
+        <div id="links" style="display: flex; flex-direction: column; border-radius: 8px; position: absolute; top: calc(50% + 3px); left: calc(50% + 20px);">
+            <div id="linksheader" style="width: 100%; display: flex; cursor: move; justify-content: center; margin-top: 8px;">
+                <p class="titlebar">links</p>
+            </div>
+            <div class="card" style="width: 320px; text-align: left; position: relative;">
+                <p>if you'd like to see more:</p>
+                <ul>
+                    <li><a style="color: black;" href="https://github.com/lemokatto">view monstrosities of mine</a></li>
+                    <li><a style="color: black;" href="https://open.spotify.com/user/22voi2d6tqoochemszzjedv4i">judge my music taste</a></li>
+                    <li><a style="color: black;" href="https://discord.com/users/353453873995841556">say hi</a></li>
+                    <li><a style="color: black;" href="https://www.pinterest.com.au/arexiancore/">look at stuff <i>i</i> like the look of</a></li>
+                    <li><a style="color: black;" href="https://www.instagram.com/lemo_katto">see the occasional photos</a></li>
+                    <li><a style="color: black;" href="https://www.goodreads.com/user/show/56257438-lemo">discuss literature? why not</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; text-align: center; position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);">
+            <p class="titlebar" id="timeElement" style="margin-right: 10px;">time</p>
+            <p class="titlebar">/</p>
+            <p class="titlebar" style="margin-left: 10px; margin-right: 10px;">best viewed on desktop</p>
+            <p class="titlebar">/</p>
+            <p class="titlebar" style="margin-left: 10px;">wip site</p>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            const songs = [
+                '<a href="https://open.spotify.com/track/3hZIvVYZWsuFpdWdXQFgKx?si=bee75f1724c848d9"><i>no, by now, the night belongs to you</i></a>',
+                '<a href="https://open.spotify.com/track/0YBphoBewDZ3wQt5D9XOMS?si=ecae65c88e884dc7"><i>to remind myself i still know how to fly</i></a>',
+                '<a href="https://open.spotify.com/track/0ifSbe8fpeOENVzMfTdFYj?si=4deb12a52f674f6b"><i>but you hit me like a feedback</i><a>',
+                '<a href="https://open.spotify.com/track/22lCyX2trHjfaFiNrzxpZr?si=1653fa890d0146ea"><i>i&#8217;m the child with the telescope eyes</i></a>',
+                '<a href="https://open.spotify.com/track/5VZYKGWMIqbh9ToBkJtaZ9?si=7cfaabe4859d4858"><i>if we live forever, let us live forever tonight</i></a>',
+                '<a href="https://open.spotify.com/track/4lVVewXw4g8hB7sldQyJiL?si=5b5edcb30a264e43"><i>and i&#8217;m still full of the love you want</i></a>',
+                '<a href="https://open.spotify.com/track/30uhVtb7vfBoUkyGpcvYGJ?si=d78c8c055e854d3e"><i>somewhere the atoms stopped fusing</i></a>',
+                '<a href="https://open.spotify.com/track/0mPuJhh8ZOY1vqXUV0LEkm?si=226818b7211543dd"><i>use my blood for something better</i></a>',
+                '<a href="https://open.spotify.com/track/4d1tJ1OSI9DKnBB19tlXSn?si=4122cc800ce740be"><i>i thought i&#8217;d be scared but i&#8217;m ok</i></a>',
+                '<a href="https://open.spotify.com/track/4tLyGyTm2kBGDLMaXfd31E?si=d5c7e95adcc34fc2"><i>so lay your head down</i></a>',
+                '<a href="https://open.spotify.com/track/2ijbU93XOTRIqoOzPGPNiK?si=4ba763a0b75d4d38"><i>behold destiny, thy guidance</i></a>',
+                '<a href="https://open.spotify.com/track/3UwtS13MeMT2Nu2rRwa50I?si=32905f24eedb4c97"><i>OH GOD I WISH YOU WERE HERE</i></a>',
+                '<a href="https://open.spotify.com/track/1G2AHjKnnDU40THXDMANFa?si=4a59564fd8fd40c0"><i>wait again, i will be much better then</i></a>',
+                '<a href="https://open.spotify.com/track/7Jdj8wHqKtFle6ypDceSGu?si=6464730389d245d7"><i>soft dawn, pull the curtains wide</i></a>',
+                '<a href="https://open.spotify.com/track/4hvCxgioUiT85MCgfIhDP3?si=598281f5c2c64a79"><i>is this the end or is the beginning?</i></a>',
+                '<a href="https://open.spotify.com/track/69PRf7DB5RmShfCvZaWEWo?si=be46ece54edf40b0"><i>we heard the cry, but how could we know?</i></a>',
+                '<a href="https://open.spotify.com/track/5FIYyvm2Tv3kglw9NsMCvQ?si=32037487d9c34d40"><i>one shining moment, a state of mind</i></a>',
+                '<a href="https://open.spotify.com/track/3jTYHkuFC2Nrh2admE5Str?si=7d73eda185c24f29"><i>if we clear our souls from blood and scorn</i></a>',
+                '<a href="https://open.spotify.com/track/5AYeGLu0KlyZUe6bS2tgdh?si=9162f88ef7a5405b"><i>we can burn into the velvet sky</i></a>',
+                '<a href="https://open.spotify.com/track/5fZ3BmBaq29MYI2Xsb5FBR?si=d98e058b4770466b"><i>the path before us, the world behind us</i></a>',
+                '<a href="https://open.spotify.com/track/6vvyavHx8WHdsw6vsuMwyR?si=0ff601434ad84a17"><i>start it over, start it over again</i></a>',
+                '<a href="https://open.spotify.com/track/1HjZDqiaUrq46GHhHXE4vG?si=ce007878a1d741ed"><i>move ahead, and not only for yourself</i></a>',
+                '<a href="https://open.spotify.com/track/65D79dyluzNUi1eq3lHdAM?si=071bb1c69aaf49d6"><i>*moderate synth riff*</i></a>',
+                '<a href="https://open.spotify.com/track/1wvwpqp33lJ90fMOZ9odG3?si=da5c3874ddb74908"><i>*aggressive synth riff*</i></a>',
+                '<a href="https://open.spotify.com/track/03DsRDQ4WsQflVFKYKgx6n?si=d7819c6b69d84ff5"><i>*hopeful synth riff*</i></a>',
+                '<a href="https://open.spotify.com/track/6xw5MhprxsbnXINmOjEzuT?si=767a667b5f334dce"><i>*gentler synth riff*</i></a>',
+
+            ];
+            !function newSong() {
+                const randomSong = Math.floor(Math.random() * songs.length);
+                document.getElementById('songDisplay').innerHTML = songs[randomSong];
+            }();
+        </script>
+        </script>
+        <script>
+            var currentTime = new Date().toLocaleString();
+            var timeText = document.querySelector("#timeElement");
+            timeText.innerHTML = currentTime
+        </script>
+        <script>
+            setInterval(function () {
+                document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+            }, 1000);
+        </script>
+        <script>
+        dragElement(document.getElementById("main"));
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                elmnt.onmousedown = dragMouseDown;
+            }
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+        dragElement(document.querySelector("#about"));
+        dragElement(document.querySelector("#links"));
+        </script>
+    </body>
+
+</html>

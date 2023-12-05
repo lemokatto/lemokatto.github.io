@@ -1,0 +1,83 @@
+img {
+    width: 200px;
+}
+
+header {
+    font-family: freight-text-pro, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-variant-numeric: lining-nums;
+}
+body {
+    font-family: neue-haas-grotesk-text, freight-text-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variant-numeric: lining-nums;
+    font-size: 16px;
+    /*background-image: url(wallpaperflare.com_wallpaper.png);
+    background-size: cover;
+    height: 100vh;*/
+}
+
+.card {
+    margin-top: -15px;
+    border: solid ghostwhite; 
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 25px;
+    box-shadow: 0px 2px 5px 0.25px gainsboro; 
+    background: #fff;
+    transition: 100ms;
+}
+.card:hover {
+    box-shadow: 0 4px 10px 0.25px darkgray;
+}
+
+#main, #about, #links {
+    z-index: 9;
+    background-color: gainsboro;
+    border: 1px solid darkgray;
+    text-align: center;
+}
+#mainheader, #aboutheader, #linksheader {
+    padding-bottom: 8px;
+    cursor: move;
+    z-index: 10;
+    background-color: gainsboro;
+    color: black;
+    box-shadow: 0px 2px 5px 0.25px gainsboro;
+}
+.titlebar {
+    margin: 0px; 
+    color: dimgrey; 
+    font-family: 'JetBrains Mono', monospace; 
+    font-weight: 700; 
+    font-size: 15px
+}
+
+a:link, a:visited {
+    font-family: neue-haas-grotesk-text, JetBrains Mono, monospace;
+    color: dimgrey;
+    text-decoration: solid underline;
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1.2px;
+    transform: 1000ms;
+}
+a:hover, a:active {
+    color: dimgray;
+    text-decoration-color: #0000FF /*#A8BEBB*/;
+    text-decoration-line: solid underline;
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1.2px;
+}
+
+::selection {
+    background-color: rgba(208, 208, 208, 0.75);
+    color: #0000FF;
+}
+
+ul {
+    list-style-type: "–  ";
+    margin-top: -7px;
+    margin-left: -15px;
+}
