@@ -30,13 +30,13 @@ body {
     transition: 100ms;
 }
 .card:hover {
-    box-shadow: 0 4px 10px 0.25px darkgray;
+    box-shadow: 0 4px 10px 0.25px darkgrey;
 }
 
 #main, #about, #links {
     z-index: 9;
     background-color: gainsboro;
-    border: 1px solid darkgray;
+    border: 1px solid darkgrey;
     text-align: center;
 }
 #mainheader, #aboutheader, #linksheader {
@@ -64,7 +64,7 @@ a:link, a:visited {
     transform: 1000ms;
 }
 a:hover, a:active {
-    color: dimgray;
+    color: dimgrey;
     text-decoration-color: #0000FF /*#A8BEBB*/;
     text-decoration-line: solid underline;
 	text-underline-offset: 2px;
