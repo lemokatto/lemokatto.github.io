@@ -81,3 +81,27 @@ ul {
     margin-top: -7px;
     margin-left: -15px;
 }
+
+.text-gradient:hover {
+    background: linear-gradient(
+        to right,
+        #000000 30%,
+        #0000FF 70%,
+        #000000 80%,
+        #0000FF 200%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+    animation: textShine 3500ms ease-in-out infinite;
+}
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
