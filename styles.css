@@ -93,7 +93,7 @@ ul {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    text-fill-color: transparent;
     background-size: 500% auto;
     animation: textShine 3500ms ease-in-out infinite;
 }
